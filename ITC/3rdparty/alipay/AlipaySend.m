@@ -76,6 +76,11 @@
                 
                 [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
                     NSLog(@"reslut = %@",resultDic);
+                    [SVProgressHUD dismiss];
+                    if ([resultDic[@"resultStatus"] isEqualToString:@"9000"] ) {
+                    }else {
+                        [SVProgressHUD showErrorWithStatus:@"支付失败"];
+                    }
                 }];
             }
             if (signedString != nil) {

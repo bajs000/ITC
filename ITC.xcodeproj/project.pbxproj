@@ -589,7 +589,7 @@
 					66FBFD471EC944C70035A394 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = LJRD943V36;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					66FBFD5B1EC944C70035A394 = {
 						CreatedOnToolsVersion = 8.3;
@@ -969,7 +969,7 @@
 			baseConfigurationReference = AA657EAAE1B12868C51F7A4D /* Pods-ITC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = LJRD943V36;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,8 +990,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmhk.ITC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "c3050635-3dd9-4c0b-be1e-9f3cea1efcc3";
+				PROVISIONING_PROFILE_SPECIFIER = "ITC_App Store";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITC/Helpers/ITC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1002,7 +1002,7 @@
 			baseConfigurationReference = 6BDE1EEA1FF9D3773B731DF9 /* Pods-ITC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = LJRD943V36;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1023,8 +1023,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmhk.ITC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "c3050635-3dd9-4c0b-be1e-9f3cea1efcc3";
+				PROVISIONING_PROFILE_SPECIFIER = "ITC_App Store";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITC/Helpers/ITC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
