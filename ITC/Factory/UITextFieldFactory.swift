@@ -62,6 +62,7 @@ class PhoneTextField: UITextFieldFactory {
 class CodeTextField: PhoneTextField {
     
     var sendCodeBtn:UIButton?
+    var count = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -90,6 +91,46 @@ class CodeTextField: PhoneTextField {
             context.move(to: CGPoint(x: 0, y: self.bounds.size.height))
             context.addLine(to: CGPoint(x: 86, y: self.bounds.size.height))
         }
+        context.strokePath()
+    }
+    
+    func startCount() -> Void {
+        count = 60
+        sendCodeBtn?.isUserInteractionEnabled = false
+        sendCodeBtn?.setTitle(String(count) + "秒后再试", for: .normal)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown(_:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc fileprivate func countDown(_ time:Timer) -> Void {
+        count = count - 1
+        if count <= 0 {
+            time.invalidate()
+            sendCodeBtn?.setTitle("获取验证码", for: .normal)
+            sendCodeBtn?.isUserInteractionEnabled = true
+            return
+        }
+        sendCodeBtn?.setTitle(String(count) + "秒后再试", for: .normal)
+    }
+}
+
+class moneyTextField: PhoneTextField {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let context:CGContext = UIGraphicsGetCurrentContext()!
+        context.setLineCap(.round)
+        context.setLineWidth(1)
+        context.setAllowsAntialiasing(true)
+        if self.isEditing {
+            context.setStrokeColor(red: 168.0 / 255.0, green: 214.0 / 255.0, blue: 94.0 / 255.0, alpha: 1.0)
+        }else{
+            context.setStrokeColor(red: 216.0 / 255.0, green: 216.0 / 255.0, blue: 216.0 / 255.0, alpha: 1.0)
+        }
+        context.beginPath()
+        context.move(to: CGPoint(x: 0, y: self.bounds.size.height - 1))
+        context.addLine(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height - 1))
         context.strokePath()
     }
 }

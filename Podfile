@@ -8,7 +8,8 @@ target 'ITC' do
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'SDWebImage'
-
+  pod 'WechatOpenSDK'
+  
   target 'ITCTests' do
     inherit! :search_paths
     # Pods for testing

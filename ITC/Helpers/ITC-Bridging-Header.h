@@ -13,3 +13,8 @@
 #endif /* ITC_Bridging_Header_h */
 
 #import <AFNetworking/AFNetworking.h>
+#import <AlipaySDK/AlipaySDK.h>
+#import "AlipaySend.h"
+#import <WXApi.h>
+#import "WXApiManager.h"
+#import "startWeiChatPAy.h"

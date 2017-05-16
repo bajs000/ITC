@@ -18,8 +18,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         SVProgressHUD.setMinimumDismissTimeInterval(1)
         UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white]
+        UINavigationBar.appearance().tintColor = UIColor.white
+        WXApi.registerApp("wx59263f56fbc803cb")
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if !"\(url)".hasPrefix("wx7e0e8330c1e9e030"){
+            AlipaySDK.defaultService().processOrder(withPaymentResult: url) { (dic) in
+                SVProgressHUD.dismiss()
+                if (dic?["resultStatus"] as! String) == "9000" {
+                    SVProgressHUD.showSuccess(withStatus: "支付成功")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PAYSUCCESS"), object: nil)
+                }else{
+                    SVProgressHUD.showError(withStatus: dic?["memo"] as! String)
+                }
+            }
+        }
+        
+        return WXApi.handleOpen(url, delegate: WXApiManager.shared())
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return WXApi.handleOpen(url, delegate: WXApiManager.shared())
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

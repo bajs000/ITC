@@ -19,19 +19,22 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - WechatOpenSDK (1.7.7)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - SDWebImage
   - SVProgressHUD
+  - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  WechatOpenSDK: cbd332148eb792d444ed4eec94f421d98f2046ee
 
-PODFILE CHECKSUM: fb729b55d59560497bd2cb05d38f2f65f1f8e5fe
+PODFILE CHECKSUM: a46dfd479a50f18b5d2ff4ba1355e584e441252e
 
 COCOAPODS: 1.2.1

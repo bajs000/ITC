@@ -18,6 +18,7 @@ class ITCMainViewController: UICollectionViewController, UICollectionViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = " "
         cellWidth = (Double(screenWidth) - 25.0) / 2.0
     }
     
@@ -93,12 +94,19 @@ class ITCMainViewController: UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            self.dismiss(animated: true, completion: nil)
+//            self.dismiss(animated: true, completion: nil)
         }else if indexPath.section == 2 {
             if indexPath.row == 1 {
-                
+                self.performSegue(withIdentifier: "travelPush", sender: nil)
             }else if indexPath.row == 2 {
                 self.performSegue(withIdentifier: "walletPush", sender: nil)
+            }else if indexPath.row == 3 {
+                let alert = UIAlertController(title: "拨打电话", message: "是否拨打4005608888", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                    UIApplication.shared.openURL(URL(string: "tel://4005608888")!)
+                }))
+                alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }else {
                 SVProgressHUD.showError(withStatus: "敬请期待")
             }
