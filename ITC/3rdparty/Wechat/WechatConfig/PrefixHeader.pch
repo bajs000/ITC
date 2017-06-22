@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  ITC
+//
+//  Created by YunTu on 2017/5/23.
+//  Copyright © 2017年 YunTu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark -
+#pragma mark - 微信支付配置参数
+
+// 开放平台登录https://open.weixin.qq.com的开发者中心获取APPID
+#define WX_APPID @"wx8a99211e882d5a72"
+// 开放平台登录https://open.weixin.qq.com的开发者中心获取AppSecret。
+#define WX_APPSecret @"07211ed3f26514f5187f0d8f5ff0f935"
+// 微信支付商户号
+#define MCH_ID  @"1374530002"
+// 安全校验码（MD5）密钥，商户平台登录账户和密码登录http://pay.weixin.qq.com
+// 平台设置的“API密钥”，为了安全，请设置为以数字和字母组成的32字符串。
+#define WX_PartnerKey @"UHY25XAGES4ZP6J1ICRF3LBDKONVMWTQ"
+
+
+#pragma mark -
+#pragma mark - 统一下单请求参数键值
+
+//  应用id
+#define WXAPPID @"appid"
+//  商户号
+#define WXMCHID @"mch_id"
+//  随机字符串
+#define WXNONCESTR @"nonce_str"
+//  签名
+#define WXSIGN @"sign"
+//  商品描述
+#define WXBODY @"body"
+//  商户订单号
+#define WXOUTTRADENO @"out_trade_no"
+//  总金额
+#define WXTOTALFEE @"total_fee"
+//  终端IP
+#define WXEQUIPMENTIP @"spbill_create_ip"
+//  通知地址
+#define WXNOTIFYURL @"notify_url"
+//  交易类型
+#define WXTRADETYPE @"trade_type"
+//  预支付交易会话
+#define WXPREPAYID @"prepay_id"
+
+
+
+#pragma mark -
+#pragma mark - 微信下单接口
+
+//  微信统一下单接口连接
+#define WXUNIFIEDORDERURL @"https://api.mch.weixin.qq.com/pay/unifiedorder"
+
+#endif /* PrefixHeader_pch */

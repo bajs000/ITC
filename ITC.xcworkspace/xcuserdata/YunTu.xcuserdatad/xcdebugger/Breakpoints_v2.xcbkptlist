@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ITC/AppDelegate.swift"
-            timestampString = "516616800.613069"
+            filePath = "ITC/3rdparty/alipay/AlipaySend.m"
+            timestampString = "516616946.197385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "application(_:open:sourceApplication:annotation:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "+toAlipay:withSubject:withBody:withTotalFee:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ITC/3rdparty/alipay/AlipaySend.m"
-            timestampString = "516616946.197385"
+            filePath = "ITC/3rdparty/Wechat/startWeiChatPAy.m"
+            timestampString = "517219821.05044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "+toAlipay:withSubject:withBody:withTotalFee:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "+jumpToBizPay:recharge:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

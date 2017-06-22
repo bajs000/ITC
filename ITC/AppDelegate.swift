@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
-        WXApi.registerApp("wx59263f56fbc803cb")
+        WXApi.registerApp("wx8a99211e882d5a72")
         // Override point for customization after application launch.
         return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        if !"\(url)".hasPrefix("wx7e0e8330c1e9e030"){
+        if !"\(url)".hasPrefix("wx8a99211e882d5a72"){
             AlipaySDK.defaultService().processOrder(withPaymentResult: url) { (dic) in
                 SVProgressHUD.dismiss()
                 if (dic?["resultStatus"] as! String) == "9000" {

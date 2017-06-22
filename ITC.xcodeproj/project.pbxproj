@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		02B857F0B70D4121A0A09B33 /* Pods_ITC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74349377D5D19A593DDF2967 /* Pods_ITC.framework */; };
 		0B856C5FF2EDCC9FCE5872A4 /* Pods_ITCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986D96E5A3A4BFBB93EAB0F5 /* Pods_ITCTests.framework */; };
+		6653DCAC1ED419040039DC9A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6653DCAB1ED419040039DC9A /* XMLDictionary.m */; };
+		6653DCB11ED4248C0039DC9A /* DataMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6653DCB01ED4248C0039DC9A /* DataMD5.m */; };
+		66DAC7051EFB701100DEFA87 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DAC7041EFB701100DEFA87 /* Util.m */; };
 		66FBFD4C1EC944C70035A394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBFD4B1EC944C70035A394 /* AppDelegate.swift */; };
 		66FBFD511EC944C70035A394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FBFD4F1EC944C70035A394 /* Main.storyboard */; };
 		66FBFD531EC944C70035A394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FBFD521EC944C70035A394 /* Assets.xcassets */; };
@@ -67,6 +70,14 @@
 
 /* Begin PBXFileReference section */
 		6479C9541864A79700D162D8 /* Pods-ITCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITCTests/Pods-ITCTests.release.xcconfig"; sourceTree = "<group>"; };
+		662DFBEC1EEFE393004F37BE /* ITC copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ITC copy-Info.plist"; path = "/Users/YunTu/Desktop/ITC/ITC copy-Info.plist"; sourceTree = "<absolute>"; };
+		6653DCAA1ED419040039DC9A /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		6653DCAB1ED419040039DC9A /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		6653DCAE1ED4242B0039DC9A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6653DCAF1ED4248C0039DC9A /* DataMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMD5.h; sourceTree = "<group>"; };
+		6653DCB01ED4248C0039DC9A /* DataMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataMD5.m; sourceTree = "<group>"; };
+		66DAC7031EFB701100DEFA87 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		66DAC7041EFB701100DEFA87 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		66FBFD481EC944C70035A394 /* ITC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FBFD4B1EC944C70035A394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66FBFD501EC944C70035A394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -245,6 +256,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6653DCA91ED419030039DC9A /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				6653DCAA1ED419040039DC9A /* XMLDictionary.h */,
+				6653DCAB1ED419040039DC9A /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		6653DCAD1ED424000039DC9A /* WechatConfig */ = {
+			isa = PBXGroup;
+			children = (
+				6653DCAE1ED4242B0039DC9A /* PrefixHeader.pch */,
+				6653DCAF1ED4248C0039DC9A /* DataMD5.h */,
+				6653DCB01ED4248C0039DC9A /* DataMD5.m */,
+			);
+			path = WechatConfig;
+			sourceTree = "<group>";
+		};
 		66FBFD3F1EC944C70035A394 = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +284,7 @@
 				66FBFD491EC944C70035A394 /* Products */,
 				9E010D6C8EF89E97A55F931F /* Pods */,
 				7A659235656DFC1A5B110758 /* Frameworks */,
+				662DFBEC1EEFE393004F37BE /* ITC copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -324,6 +355,8 @@
 				AF71CB1C1ECA943400C837FF /* NetworkModel.swift */,
 				66FBFD801EC948E00035A394 /* Helpers.swift */,
 				AF71CB171EC9909400C837FF /* ITC-Bridging-Header.h */,
+				66DAC7031EFB701100DEFA87 /* Util.h */,
+				66DAC7041EFB701100DEFA87 /* Util.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -371,6 +404,7 @@
 		AF71CB1E1ECA994300C837FF /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
+				6653DCA91ED419030039DC9A /* XMLDictionary */,
 				AF71CB1F1ECA994300C837FF /* alipay */,
 				AF71CB861ECA994300C837FF /* Wechat */,
 			);
@@ -503,6 +537,7 @@
 		AF71CB861ECA994300C837FF /* Wechat */ = {
 			isa = PBXGroup;
 			children = (
+				6653DCAD1ED424000039DC9A /* WechatConfig */,
 				AF71CB871ECA994300C837FF /* startWeiChatPAy.h */,
 				AF71CB881ECA994300C837FF /* startWeiChatPAy.m */,
 				AF71CB891ECA994300C837FF /* WXApiManager.h */,
@@ -589,7 +624,7 @@
 					66FBFD471EC944C70035A394 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = LJRD943V36;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					66FBFD5B1EC944C70035A394 = {
 						CreatedOnToolsVersion = 8.3;
@@ -799,10 +834,12 @@
 				AF71CB961ECA994300C837FF /* openssl_wrapper.m in Sources */,
 				AF71CB1D1ECA943400C837FF /* NetworkModel.swift in Sources */,
 				AF71CB971ECA994300C837FF /* RSADataSigner.m in Sources */,
+				6653DCB11ED4248C0039DC9A /* DataMD5.m in Sources */,
 				AF71CB931ECA994300C837FF /* DataVerifier.m in Sources */,
 				AF71CB981ECA994300C837FF /* RSADataVerifier.m in Sources */,
 				66FBFD4C1EC944C70035A394 /* AppDelegate.swift in Sources */,
 				66FBFD7B1EC944F60035A394 /* ITCLoginViewController.swift in Sources */,
+				6653DCAC1ED419040039DC9A /* XMLDictionary.m in Sources */,
 				AF71CB991ECA994300C837FF /* startWeiChatPAy.m in Sources */,
 				66FBFD7E1EC946F40035A394 /* UITextFieldFactory.swift in Sources */,
 				66FBFD811EC948E00035A394 /* Helpers.swift in Sources */,
@@ -817,6 +854,7 @@
 				AF71CB8D1ECA994300C837FF /* AlipaySend.m in Sources */,
 				AF71CB941ECA994300C837FF /* MD5DataSigner.m in Sources */,
 				AF71CB191EC99AC300C837FF /* WalletViewController.swift in Sources */,
+				66DAC7051EFB701100DEFA87 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,8 +1007,8 @@
 			baseConfigurationReference = AA657EAAE1B12868C51F7A4D /* Pods-ITC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = LJRD943V36;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ITC/3rdparty/alipay",
@@ -990,8 +1028,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmhk.ITC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3050635-3dd9-4c0b-be1e-9f3cea1efcc3";
-				PROVISIONING_PROFILE_SPECIFIER = "ITC_App Store";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITC/Helpers/ITC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1002,8 +1040,8 @@
 			baseConfigurationReference = 6BDE1EEA1FF9D3773B731DF9 /* Pods-ITC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = LJRD943V36;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ITC/3rdparty/alipay",
@@ -1023,8 +1061,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmhk.ITC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3050635-3dd9-4c0b-be1e-9f3cea1efcc3";
-				PROVISIONING_PROFILE_SPECIFIER = "ITC_App Store";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITC/Helpers/ITC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
